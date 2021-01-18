@@ -28,7 +28,7 @@ class Drw(Widget):
 	Im = Image.new("RGB", (Height, Height), BgColor)
 	byte_io = BytesIO()
 	Im.save(byte_io, 'PNG')
-	Net = tf.keras.models.load_model('network.model')
+	Net = tf.keras.models.load_model('network.model') #loads model that is created by NeuralNetwork.py
 
 	def __init__(self,**kwargs):
 		super(Drw, self).__init__(**kwargs)
@@ -38,7 +38,7 @@ class Drw(Widget):
 			self.array = np.zeros((28,28))
 			self.Im = Image.open(self.byte_io)
 			self.draw = ImageDraw.Draw(self.Im)
-			self.Grids = Grid(28, self.Height, self.Height, self.draw, self.GridColor)
+			self.Grids = Grid(28, self.Height, self.Height, self.draw, self.GridColor) #creates grid array
 			self.Cells = Cells(self.Grids[0], self.Grids[1]) #3D list of all the cell coordinates eg [ [[0,1,2,3], [5, 6, 7]....], [[0,1,2,3,4], [6,7,8,9]....] . 1st list holds x coordinate lists and 2nd list y coordinate lists
             
 			self.byte_io = BytesIO()
@@ -48,9 +48,9 @@ class Drw(Widget):
 			self.clear = Button(text="clear", font_size=self.Height*0.05, size = (self.Width *0.25, self.Height*0.10), pos =(self.Height, self.Height * 0.90))
 			self.clear.bind(on_press = self.Clear)
 			self.add_widget(self.clear)
-		
-
-			self.ZeroRectangle = Rectangle(pos = (self.Width/2, self.Height*0.10), size = (self.Width/2*0.10, 0))
+			
+			#percentage bars 0-9
+			self.ZeroRectangle = Rectangle(pos = (self.Width/2 , self.Height*0.10), size = (self.Width/2*0.10, 0))
 			self.OneRectangle = Rectangle(pos = (self.Width/2 + (self.Width/2) * 0.10, self.Height*0.10), size = (self.Width/2*0.05, 0))
 			self.TwoRectangle = Rectangle(pos = (self.Width/2 + (self.Width/2) * 0.20, self.Height*0.10), size = (self.Width/2*0.05, 0))
 			self.ThreeRectangle = Rectangle(pos = (self.Width/2 + (self.Width/2) * 0.30, self.Height*0.10), size = (self.Width/2*0.05, 0))
@@ -61,16 +61,17 @@ class Drw(Widget):
 			self.EightRectangle = Rectangle(pos = (self.Width/2 + (self.Width/2) * 0.80, self.Height*0.10), size = (self.Width/2*0.05, 0))
 			self.NineRectangle = Rectangle(pos = (self.Width/2 + (self.Width/2) * 0.90, self.Height*0.10), size = (self.Width/2*0.05, 0))
 
-			self.ZeroLabel = Label(text = '  0', pos= (self.Width/2,self.Height*0.05), size=(10,10))
-			self.OneLabel = Label(text = '  1', pos= (self.Width/2+ (self.Width/2) * 0.10,self.Height*0.05), size=(10,10))
-			self.TwoLabel = Label(text = '  2', pos= (self.Width/2+ (self.Width/2) * 0.20,self.Height*0.05), size=(10,10))
-			self.ThreeLabel = Label(text = '  3', pos= (self.Width/2+ (self.Width/2) * 0.30,self.Height*0.05), size=(10,10))
-			self.FourLabel = Label(text = '  4', pos= (self.Width/2+ (self.Width/2) * 0.40,self.Height*0.05), size=(10,10))
-			self.FiveLabel = Label(text = '  5', pos= (self.Width/2+ (self.Width/2) * 0.50,self.Height*0.05), size=(10,10))
-			self.SixLabel = Label(text = '  6', pos= (self.Width/2+ (self.Width/2) * 0.60,self.Height*0.05), size=(10,10))
-			self.SevenLabel = Label(text = '  7', pos= (self.Width/2+ (self.Width/2) * 0.70,self.Height*0.05), size=(10,10))
-			self.EightLabel = Label(text = '  8', pos= (self.Width/2+ (self.Width/2) * 0.80,self.Height*0.05), size=(10,10))
-			self.NineLabel = Label(text = '  9', pos= (self.Width/2+ (self.Width/2) * 0.90,self.Height*0.05), size=(10,10))
+			#number labels 0-9
+			self.ZeroLabel = Label(text = '0', pos= (self.Width/2 + (self.Width/2*0.035)/2 ,self.Height*0.05), size=(10,10))
+			self.OneLabel = Label(text = '1', pos= (self.Width/2 + (self.Width/2) * 0.10 + (self.Width/2*0.035)/2 ,self.Height*0.05), size=(10,10))
+			self.TwoLabel = Label(text = '2', pos= (self.Width/2 + (self.Width/2) * 0.20 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
+			self.ThreeLabel = Label(text = '3', pos= (self.Width/2 + (self.Width/2) * 0.30 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
+			self.FourLabel = Label(text = '4', pos= (self.Width/2 + (self.Width/2) * 0.40 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
+			self.FiveLabel = Label(text = '5', pos= (self.Width/2 + (self.Width/2) * 0.50 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
+			self.SixLabel = Label(text = '6', pos= (self.Width/2 + (self.Width/2) * 0.60 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
+			self.SevenLabel = Label(text = '7', pos= (self.Width/2 + (self.Width/2) * 0.70 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
+			self.EightLabel = Label(text = '8', pos= (self.Width/2 + (self.Width/2) * 0.80 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
+			self.NineLabel = Label(text = '9', pos= (self.Width/2 + (self.Width/2) * 0.90 + (self.Width/2*0.035)/2,self.Height*0.05), size=(10,10))
 
 
 	def ImageByte(self, instance, ImageByte):
@@ -85,35 +86,33 @@ class Drw(Widget):
 			self.bg.texture = self.ImageByte(self, self.byte_io.getvalue()).texture
 
 	def Clear(self, instance):
-
 		drawFrame(self.draw, self.CurrentCells, self.Cells, self.BgColor)
 		self.save(self)
 		self.CurrentCells =[]
 		self.array = np.zeros((28,28))
 
-	def Draw(self, instance, X):
+	def Draw(self, instance, X): # 4 cells are always drawn simultaneously
 		self.XcellList = [x for x in self.Cells[0] if self.Xtouch+X in x][0] #finds the pixel X coordinates list containing the X coordinate you clicked with the mouse 
 		self.YcellList = [x for x in self.Cells[1] if self.Ytouch+X in x][0]#finds the pixel Y coordinates list containing the Y coordinate you clicked with the mouse 
 		self.cellIndexList = [self.Cells[0].index(self.XcellList), self.Cells[1].index(self.YcellList)] # produces a column/row list [column, row] of the cell you clicked with the mouse
 		self.color = self.CellColor
-		#if self.cellIndexList not in self.CurrentCells: #checks if the cell you clicked is already clicked, if not the [column, pair] gets added to CurrentCells and the cell gets colored
-		self.CurrentCells.append([self.cellIndexList[0], self.cellIndexList[1]])
-		self.CurrentCells.append([self.cellIndexList[0]+1, self.cellIndexList[1]])
-		self.CurrentCells.append([self.cellIndexList[0]+1, self.cellIndexList[1]-1])
-		self.CurrentCells.append([self.cellIndexList[0], self.cellIndexList[1]-1])
 		
-
-
-		#elif self.checkSingleClick == True and self.cellIndexList in self.CurrentCells: #if you only clicked once, and on a cell that is already clicked/activated, it gets erased again
-			#self.CurrentCells.remove(self.cellIndexList)
-			#self.color = self.BgColor
-
-
-
+		self.CurrentCells.append([self.cellIndexList[0], self.cellIndexList[1]])
 		drawCell(self.XcellList,self.YcellList, self.color, self.draw)
-		drawCell(self.Cells[0][self.cellIndexList[0]+1], self.Cells[1][self.cellIndexList[1]], self.color, self.draw)
-		drawCell(self.Cells[0][self.cellIndexList[0]+1], self.Cells[1][self.cellIndexList[1]-1], self.color, self.draw)
-		drawCell(self.Cells[0][self.cellIndexList[0]], self.Cells[1][self.cellIndexList[1]-1], self.color, self.draw) #function that draws (or erases, based on the previous conditions) the cell you clicked
+
+		#some if conditions if you draw near the border/edge of the grid 
+		if  self.cellIndexList[0] + 1 < 28:
+			self.CurrentCells.append([self.cellIndexList[0]+1, self.cellIndexList[1]])
+			drawCell(self.Cells[0][self.cellIndexList[0]+1], self.Cells[1][self.cellIndexList[1]], self.color, self.draw)
+
+		if self.cellIndexList[0] + 1 < 28 and self.cellIndexList[1] - 1 > -1:
+			self.CurrentCells.append([self.cellIndexList[0]+1, self.cellIndexList[1]-1])
+			drawCell(self.Cells[0][self.cellIndexList[0]+1], self.Cells[1][self.cellIndexList[1]-1], self.color, self.draw)
+
+		if self.cellIndexList[1] - 1 > -1:
+			self.CurrentCells.append([self.cellIndexList[0], self.cellIndexList[1]-1])
+			drawCell(self.Cells[0][self.cellIndexList[0]], self.Cells[1][self.cellIndexList[1]-1], self.color, self.draw)
+		
 		
 		self.save(self)
 		
@@ -123,10 +122,9 @@ class Drw(Widget):
 		self.array[self.cellIndexList[1], self.cellIndexList[0]] = 1.0
 
 		self.PredImage = np.expand_dims(self.array,0)
-
-		self.PredValue = self.Net.predict(self.PredImage)
+		self.PredValue = self.Net.predict(self.PredImage) #predicts image
 		
-		with self.canvas:
+		with self.canvas: #sets percentage bars according to predicted value
 
 			self.ZeroRectangle.size = (self.Width/2*0.05, self.PredValue[0][0] * self.Height * 0.60)
 			self.OneRectangle.size = (self.Width/2*0.05, self.PredValue[0][1] * self.Height * 0.60)
@@ -141,9 +139,6 @@ class Drw(Widget):
 
 		
 		
-		
-
-
 	def onTouchFunctions(self, touch):
 		self.touchpos = touch.pos #tuple that contains the X/Y coords of your mouse click
 		self.Xtouch = math.floor(self.touchpos[0]) #rounds the coords down

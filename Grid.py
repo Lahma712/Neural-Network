@@ -79,7 +79,7 @@ def drawCell(X,Y, color, draw): #function that draws a single cell when you clic
         for x in X:
             draw.point([x, y], color)
 
-def drawFrame(draw, currentCells, cells, color): #function that draws the frames when the game is running
+def drawFrame(draw, currentCells, cells, color): #function that draws the frames
     for cellIndex in currentCells:
         try:
             for y in cells[1][cellIndex[1]]:

@@ -1,3 +1,3 @@
 # Neural-Network
 
-![gif](https://giphy.com/gifs/zyrncvyZos8SJ2977x.gif)
+![gif](https://media.giphy.com/media/zyrncvyZos8SJ2977x/giphy.gif)

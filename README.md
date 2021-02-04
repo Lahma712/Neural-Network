@@ -3,7 +3,7 @@ This is my Python implementation of a small neural network using the popular <b>
 This perceptron has been trained on the extended MNIST (EMNIST) handwritten digits dataset (280.000 digits in total).
 Currently, the perceptron has 2 hidden layers (with 300 neurons each) and has been trained over 10 epochs.
 
-<b>How to use:</b>
+<b>How to use: </b>
 Use the mouse cursor to draw a single digit (0-9) onto the grid. While drawing, you can observe the vertical bars on the left, which
 represent the current decision of the neural network.
 

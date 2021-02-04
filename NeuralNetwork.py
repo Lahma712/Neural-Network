@@ -13,7 +13,7 @@ compl_training_images = np.concatenate((aliased_training_images, aliased_test_im
 compl_training_labels = np.concatenate((training_labels, test_labels), axis=0)
 network = tf.keras.models.Sequential()
 
-#2 hidden layers, each layer having 150 neurons (output layer having 10 neurons)
+#2 hidden layers, each layer having 300 neurons (output layer having 10 neurons)
 network.add(tf.keras.layers.Flatten(input_shape = (28,28)))
 network.add(tf.keras.layers.Dense(300, activation = tf.nn.relu))
 network.add(tf.keras.layers.Dense(300, activation = tf.nn.relu))

@@ -24,6 +24,8 @@ represent the current decision of the neural network.
 
 -extra-keras-datasets (https://github.com/christianversloot/extra_keras_datasets)
 
+-Numpy
+
 <b>Sources that helped me: </b>
 
 https://www.tensorflow.org/tutorials/quickstart/beginner

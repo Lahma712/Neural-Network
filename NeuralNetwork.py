@@ -16,7 +16,6 @@ network = tf.keras.models.Sequential()
 #2 hidden layers, each layer having 150 neurons (output layer having 10 neurons)
 network.add(tf.keras.layers.Flatten(input_shape = (28,28)))
 network.add(tf.keras.layers.Dense(300, activation = tf.nn.relu))
-#network.add(tf.keras.layers.Dense(150, activation = tf.nn.relu))
 network.add(tf.keras.layers.Dense(300, activation = tf.nn.relu))
 network.add(tf.keras.layers.Dense(10, activation = tf.nn.softmax))
 

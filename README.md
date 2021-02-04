@@ -5,7 +5,7 @@ Currently, the network has 2 hidden layers (with 300 neurons each) and has been 
 
 <b>How to use: </b>
 
-Execute the <b>Main.py</b> file. Use the mouse cursor to draw a single digit (0-9) onto the grid. While drawing, you can observe the vertical bars on the left, which
+Execute the <b>Main.py</b> file. Use the mouse cursor to draw a single digit (0-9) onto the grid. While drawing, you can observe the vertical bars on the right, which
 represent the current decision of the neural network.
 
 ![gif](https://media.giphy.com/media/zyrncvyZos8SJ2977x/giphy.gif)

@@ -1,6 +1,6 @@
 # Neural-Network
 This is my Python implementation of a small neural network using the popular <b>Tensorflow</b> libary, made by <b>Google</b>.
-This perceptron has been trained on the extended MNIST (EMNIST) handwritten digits dataset (280.000 digits in total).
+This neural network has been trained on the extended MNIST (EMNIST) handwritten digits dataset (280.000 digits in total).
 Currently, the perceptron has 2 hidden layers (with 300 neurons each) and has been trained over 10 epochs.
 
 <b>How to use: </b>

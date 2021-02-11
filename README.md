@@ -27,7 +27,7 @@ represent the current decision of the neural network.
 
 -Numpy
 
-# <b>Credits to some sources that helped me: </b>
+# <b>Sources: </b>
 
 https://www.tensorflow.org/tutorials/quickstart/beginner
 

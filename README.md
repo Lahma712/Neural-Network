@@ -29,6 +29,6 @@ represent the current decision of the neural network.
 
 # <b>Sources: </b>
 
-https://www.tensorflow.org/tutorials/quickstart/beginner
+- https://www.tensorflow.org/tutorials/quickstart/beginner
 
-https://www.youtube.com/watch?v=wQ8BIBpya2k&list=PLQVvvaa0QuDfhTox0AjmQ6tvTgMBZBEXN
+- https://www.youtube.com/watch?v=wQ8BIBpya2k&list=PLQVvvaa0QuDfhTox0AjmQ6tvTgMBZBEXN

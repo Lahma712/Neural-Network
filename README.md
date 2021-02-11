@@ -23,7 +23,7 @@ represent the current decision of the neural network.
 
 -Tensorflow
 
--extra-keras-datasets (credits to https://github.com/christianversloot/extra_keras_datasets)
+-extra-keras-datasets (credit to https://github.com/christianversloot/extra_keras_datasets)
 
 -Numpy
 

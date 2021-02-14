@@ -11,7 +11,7 @@ Currently, the network has 2 hidden layers (with 300 neurons each) and has been 
 Execute the <b>Main.py</b> file. Use the mouse cursor to draw a single digit (0-9) onto the grid. While drawing, you can observe the vertical bars on the right, which
 represent the current decision of the neural network.
 
-![gif](https://media.giphy.com/media/zyrncvyZos8SJ2977x/giphy.gif)
+<img src= "https://media.giphy.com/media/zyrncvyZos8SJ2977x/giphy.gif" width=500>
 
 (framerate/quality loss due to GIF conversion)
 

@@ -2,7 +2,7 @@
 This is my Python implementation of a small neural network using the popular <b>Tensorflow</b> libary, made by <b>Google</b>.
 This neural network has been trained on the extended MNIST (EMNIST) handwritten digits dataset (280.000 digits in total).
 Currently, the network has 2 hidden layers (with 300 neurons each) and has been trained over 10 epochs. I implemented the GUI using <i>Kivy</i> as well as
-<i>PIL<i/> (Python Imaging Library).
+<i>PIL</i> (Python Imaging Library).
 
 # How to use:
 

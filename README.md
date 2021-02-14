@@ -6,6 +6,8 @@ Currently, the network has 2 hidden layers (with 300 neurons each) and has been 
 
 # <b>How to use: </b>
 
+<b>Download the lastest release</b> and follow the instructions <b>or download the source code</b> and run <i>Main.py</i> from an IDE
+
 Execute the <b>Main.py</b> file. Use the mouse cursor to draw a single digit (0-9) onto the grid. While drawing, you can observe the vertical bars on the right, which
 represent the current decision of the neural network.
 

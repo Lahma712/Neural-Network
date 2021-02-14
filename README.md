@@ -4,7 +4,7 @@ This neural network has been trained on the extended MNIST (EMNIST) handwritten 
 Currently, the network has 2 hidden layers (with 300 neurons each) and has been trained over 10 epochs. I implemented the GUI using <i>Kivy</i> as well as
 <i>PIL</i> (Python Imaging Library).
 
-# How to use:
+# Instructions:
 
 <b>Download the lastest release</b> and follow the instructions <b>or download the source code</b> and run <i>App.py</i> from an IDE
 

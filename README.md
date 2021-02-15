@@ -17,7 +17,7 @@ represent the current decision of the neural network.
 
 # Dependencies:
 
--Python 3.8
+-Python 3.x
 
 -Kivy 2.0.0
 
